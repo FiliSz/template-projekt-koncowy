@@ -1,9 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ThemeProvider from 'react-bootstrap/ThemeProvider'
-import { Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
 import Menu from "./components/Menu/Menu";
+import InputMaps from "./components/Input/Input";
+import ButtonFind from "./components/ButtonFind/ButtonFind";
+import Columns from "./components/Columns/Columns";
+import InfoDivs from "./components/InfoDivs/InfoDivs";
+import MapsDivs from "./components/MapsDiv/MapsDivs";
 
 function App() {
   return (
@@ -12,10 +14,10 @@ function App() {
           minBreakpoint="xxs"
       >
           <Menu/>
-          <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="about" element={<About />} />
-          </Routes>
+          <InputMaps/>
+          <InfoDivs/>
+          <ButtonFind/>
+          <MapsDivs/>
       </ThemeProvider>
   );
 }

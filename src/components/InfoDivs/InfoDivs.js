@@ -6,8 +6,8 @@ import "./InfoDivs.scss"
 import axios from "axios";
 
 
-const api = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=5000&type=restaurant&keyword=cruise&key=AIzaSyDW5JrwIlgMmRTEzTi2XHxoSxBC56QmruY'
-const apiv2 = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=AIzaSyDW5JrwIlgMmRTEzTi2XHxoSxBC56QmruY'
+const api = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=5000&type=restaurant&keyword=cruise&key=KEY'
+const apiv2 = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=KEY'
 /* const InfoDivs = () =>{
     const [restaurant, setRestaurant] = useState([]);
 */
@@ -38,12 +38,12 @@ const InfoDivs = () => {
     const longitude = 55.1454;
     let radMetter = 2 * 1000; // Search withing 2 KM radius
 
-    const url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + latitude + ',' + longitude + '&radius=' + radMetter + '&key=' + 'AIzaSyDW5JrwIlgMmRTEzTi2XHxoSxBC56QmruY'
+    const url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + latitude + ',' + longitude + '&radius=' + radMetter + '&key=' + 'KEY'
     console.log(url)
     useEffect(()=>{
         var config = {
             method: 'get',
-            url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=5000&type=restaurant&keyword=cruise&key=AIzaSyDW5JrwIlgMmRTEzTi2XHxoSxBC56QmruY',
+            url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=5000&type=restaurant&keyword=cruise&key=KEY',
             headers: { }
         };
 

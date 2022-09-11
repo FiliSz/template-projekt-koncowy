@@ -6,23 +6,15 @@ import "./Menu.scss"
 
 const Menu = () =>{
     return(
-        <Navbar collapseOnSelect expand="xl" bg="light" variant="light" className="menuStyles">
-            <Container fluid>
-                <Navbar.Brand href="#home">
-                    PlacesApp
+        <Navbar expand="xl" bg="dark" variant="dark" className="menuStyles">
+            <Container className="navBarPlacesApp" fluid>
+                <Navbar.Brand  href="#home">
+                    <h1 className="navBarPlacesApp">PlacesApp</h1>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="#features">O aplikacji</Nav.Link>
-                        <Nav.Link href="#pricing">Instrukcja</Nav.Link>
-                        <Nav.Link href="#deets">Mapa</Nav.Link>
-                        <Nav.Link href="#memes"></Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
             </Container>
         </Navbar>
     )
 }
 
 export default Menu
+

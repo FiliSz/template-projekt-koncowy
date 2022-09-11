@@ -42,12 +42,20 @@ const InfoDivs = () => {
 
         
 
+<<<<<<< HEAD
     useEffect  ( () => {
           const apiTomTomKey = '&view=Unified&relatedPois=off&key=1jRPKMUu8jeXO2Cm2BAcDPLe5araYug6'
           async function getRequest(url){
              const res = await fetch(url + typeOfPlace + apiTomTomKey);
              if (res.ok){
                  return res.json();
+=======
+const api = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=5000&type=restaurant&keyword=cruise&key=KEY'
+const apiv2 = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&key=KEY'
+/* const InfoDivs = () =>{
+    const [restaurant, setRestaurant] = useState([]);
+*/
+>>>>>>> 39e640abee75997ce9d7e8051445c32f19e45ef1
 
              }else{
                  throw new Error("Bad response")
@@ -114,8 +122,34 @@ const InfoDivs = () => {
     });
 
 
+<<<<<<< HEAD
     if (loadError) return "Błąd wczytywania mapy";
     if (!isLoaded) return "Wczytywanie";
+=======
+const InfoDivs = () => {
+    const [resta, setResta] = useState([])
+    const latitude = 25.0756; // you can update it with user's latitude & Longitude
+    const longitude = 55.1454;
+    let radMetter = 2 * 1000; // Search withing 2 KM radius
+
+    const url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + latitude + ',' + longitude + '&radius=' + radMetter + '&key=' + 'KEY'
+    console.log(url)
+    useEffect(()=>{
+        var config = {
+            method: 'get',
+            url: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=5000&type=restaurant&keyword=cruise&key=KEY',
+            headers: { }
+        };
+
+        axios(config)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    })
+>>>>>>> 39e640abee75997ce9d7e8051445c32f19e45ef1
 
 
      const handleClick = async (element , index, nmb, latPos, lonPos) =>{
@@ -271,6 +305,7 @@ const InfoDivs = () => {
 
     )
 
+<<<<<<< HEAD
  }
 
 
@@ -281,3 +316,6 @@ const InfoDivs = () => {
 
 export default InfoDivs
 
+=======
+export default InfoDivs
+>>>>>>> 39e640abee75997ce9d7e8051445c32f19e45ef1
